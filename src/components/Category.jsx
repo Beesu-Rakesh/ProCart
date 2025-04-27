@@ -6,21 +6,23 @@ function Category(props) {
   const { categories,setCurrCategory} = props;
   const {setPageNum} = usePaginationContext();
   return (
-    <>
-    <button className="category-btn" onClick={()=>{setCurrCategory("All Categories")
-    setPageNum(1);
-    }}>
-      All Categories
-    </button>
-        {categories.map((category)=>{
-          return <button 
-          className="category-btn" 
-          onClick={()=>{
-            setCurrCategory(category);
-            setPageNum(1);
-          }}>{category}</button>
-        })}
-    </>
+
+    
+
+        <select name="Categories" id="category" className="categories"
+        onChange={(e) => {
+          const selectedCategory = e.target.value;
+          setCurrCategory(selectedCategory);
+          setPageNum(1);
+        }}
+        >
+        <option value="All Categories">All Categories</option>
+  {categories.map((category, index) => (
+    <option key={index} value={category}>
+      {category}
+    </option>
+  ))}
+        </select>
   )
 }
 
