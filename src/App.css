@@ -19,7 +19,6 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 12px rgba(30,41,59,0.08);
-    padding: 0 2rem;
     top: 0;
     z-index: 100;
 }
@@ -190,36 +189,3 @@ body {
     justify-content: center;
 }
 
-@media (max-width: 600px) {
-    .nav-wrapper {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 0.5rem;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-        height: auto;
-    }
-    .product {
-        width: 98vw;
-        min-width: 180px;
-        max-width: 98vw;
-        padding: 1rem 0.5rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .product-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    .container {
-        padding: 1rem 0.5rem;
-    }
-    .product {
-        width: 95vw;
-        min-width: 260px;
-        max-width: 400px;
-    }
-}
