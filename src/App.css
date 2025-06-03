@@ -8,7 +8,6 @@ body {
     background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
     min-height: 100vh;
     color: #22223b;
-    letter-spacing: 0.01em;
     transition: background 0.3s;
 }
 
@@ -43,7 +42,7 @@ body {
 
 .categories{
     height: 70%;
-    width: 7rem;
+    width: 6.5rem;
     border-radius: 10px;
     background-color: transparent;
     margin-left: 0.5rem;
@@ -55,9 +54,6 @@ body {
 }
 
 .product-wrapper{
-    margin-top: 3rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -70,7 +66,7 @@ body {
     padding: 1.2rem 1rem 1.5rem 1rem;
     text-align: center;
     height: 21rem;
-    width: 20rem;
+    width: 19rem;
     overflow-y: auto;
     border-radius: 18px;
     background: linear-gradient(135deg, #fff 70%, #f8f8ff 100%);
