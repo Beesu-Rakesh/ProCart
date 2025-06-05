@@ -42,7 +42,7 @@ function Cart() {
             ) : (
                 <>
                 <ProductList productList={productList} isCart={true} />
-                <div style={{ textAlign: "right", marginTop: "2rem", fontWeight: "bold", fontSize: "1.2rem" }}>
+                <div style={{ textAlign: "right", marginTop: "2rem",  marginBottom: "2rem",fontWeight: "bold", fontSize: "1.2rem" }}>
                         Total Amount: ₹{totalAmount.toLocaleString('en-IN')}
                 </div>
                 </>
