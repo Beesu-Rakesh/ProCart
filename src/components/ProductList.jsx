@@ -36,7 +36,9 @@ function ProductList(props) {
                             <img src={product.image} alt="product_img" className="product-image" />
                             <div className="product-meta">
                                 <p className="product-title">{product.title}</p>
-                                <p className="price">${product.price}</p>
+                                <p className="price">
+                                    ₹{Math.round(product.price * 83).toLocaleString('en-IN')}
+                                </p>
                             </div>
 
                             {isCart || isInCart ? (

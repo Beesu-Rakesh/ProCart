@@ -7,6 +7,12 @@ function Cart() {
     const productList = useSelector((store) => store.cartReducer.cartProducts);
     const navigate = useNavigate();
 
+    // Calculate total amount in INR
+    const totalAmount = productList.reduce((sum, product) => {
+        // Convert price to INR and multiply by quantity, round to integer
+        return sum + Math.round(product.price * 83) * product.indQuantity;
+    }, 0);
+
     return (
         <>
             <h1>Cart</h1>
@@ -34,7 +40,12 @@ function Cart() {
                     </button>
                 </div>
             ) : (
+                <>
                 <ProductList productList={productList} isCart={true} />
+                <div style={{ textAlign: "right", marginTop: "2rem", fontWeight: "bold", fontSize: "1.2rem" }}>
+                        Total Amount: ₹{totalAmount.toLocaleString('en-IN')}
+                </div>
+                </>
             )}
         </>
     );
