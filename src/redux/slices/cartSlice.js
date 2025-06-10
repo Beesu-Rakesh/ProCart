@@ -20,6 +20,7 @@ const cartSlice = createSlice({
             }
         },
         deleteFromCart:(state,action)=>{
+
             const productToBeDeleted = action.payload;
             const productIndex = state.cartProducts.findIndex((product)=>{return product.id === productToBeDeleted.id});
             if(productIndex == -1){
@@ -33,6 +34,11 @@ const cartSlice = createSlice({
                     state.cartQuantity-=1;
                 }
             }
+        
+        },
+        clearCart:(state)=>{
+            state.cartProducts = [];
+            state.cartQuantity = 0;
         },
     }
 });
